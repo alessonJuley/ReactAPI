@@ -11,7 +11,7 @@ This project is a simple application that allows users to search an Akatsuki mem
 
 1. Clone the repository:
 ```
-git clone https://github.com/alessonJuley/To-do.git](https://github.com/alessonJuley/ReactAPI.git
+git clone https://github.com/alessonJuley/ReactAPI.git
 ```
 
 2. Navigate to the project folder:
