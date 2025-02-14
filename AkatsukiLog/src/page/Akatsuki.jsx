@@ -4,30 +4,27 @@ import defaultImage from '../assets/defaultImage.jpg';
 const Akatsuki = () => {
 
           const [member, setMember] = useState("");
-          const [memberName, setMemberName] = useState([]);
-          const [memberImage, setMemberImage] = useState([]);
+          const [memberName, setMemberName] = useState("");
+          const [memberImage, setMemberImage] = useState("");
           const [memberJutsu, setMemberJutsu] = useState([]);
 
           const handleSearch = (event) => {
                     // prevent refresh when form is getting submitted
                     event.preventDefault();
 
-                    console.log("Member: ", member);
                     var searchedMember = "";
 
                     if(member.includes("")){
                               // format input to replace empty space as $20
                               searchedMember = member.replace(" ", "%20");
-                              console.log("searchedMember", searchedMember);
-                    }
-                    else if(member === " "){
-                              alert("Please search a member");
-                    }
-                    
+                    }                    
 
+                    // get json data
                     fetch(`https://narutodb.xyz/api/akatsuki/search?name=${searchedMember}`).then((response) => {
                               return response.json();
                     }).then((data) => {
+                              
+                              // take info you want and add to variables
                               const nameTaken = data.name;
                               const imageTaken = data.images;
                               const jutsuTaken = data.jutsu;
@@ -36,10 +33,7 @@ const Akatsuki = () => {
                               setMemberImage(imageTaken);
                               setMemberJutsu(jutsuTaken);
                     }).catch((event) => {
-                              console.log(event);
-                              setMemberName("Member does not exist.");
-                              setMemberImage("");
-                              setMemberJutsu("");
+                              alert("Member does not exist.");
                     });
           }
 
@@ -60,7 +54,14 @@ const Akatsuki = () => {
                               <div className="member-info">
                                         <h2>{memberName}</h2>
                                         <img src={memberImage} alt="Akatsuki member" />
-                                        <p>{memberJutsu}</p>
+                                        <h3>Jutsu</h3>
+                                        <ul className="jutsu-list">
+                                                  {memberJutsu.map((jutsuList, index) => 
+                                                            <li key={index}>
+                                                                      {jutsuList}
+                                                            </li>
+                                                  )}
+                                        </ul>
                               </div>
                     </div>
           );

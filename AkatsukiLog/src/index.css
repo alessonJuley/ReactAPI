@@ -48,9 +48,16 @@ h1{
 .member-info{
   background-color: hsla(0, 0%, 100%, 0.2);
   border-radius: 45px;
+  text-align: center;
 }
 
 .member-info h2{
+  text-align: center;
+  color: white;
+  padding-top: 25px;
+}
+
+.member-info h3{
   text-align: center;
   color: white;
   padding-top: 25px;
@@ -64,9 +71,8 @@ h1{
   margin-right: auto;
 }
 
-.member-info p{
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5%;
+.jutsu-list{
   color: white;
+  display: inline-block;
+  text-align: left;
 }
