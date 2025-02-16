@@ -30,6 +30,9 @@ npm run dev
 
 ### Screenshot
   ![Screenshot 2025-02-14 at 7 46 16 PM](https://github.com/user-attachments/assets/e71d85d1-9eae-4dc4-8784-86bae55cfac2)
+  
+<img width="1280" alt="Screenshot 2025-02-16 at 1 42 40 AM" src="https://github.com/user-attachments/assets/810c80bf-b304-4292-b04d-406944f2a12e" />
+
 
 ### Credits
 NarutoDB API: https://narutodb.xyz/docs/akatsuki
