@@ -48,7 +48,7 @@ const Akatsuki = () => {
                                                             onChange={(event) => setMember(event.target.value)}/>
                                         </form>
                                         <button form="search-member">
-                                                  Search
+                                                  Search member
                                         </button>
                               </div>
                               <div className="member-info">
